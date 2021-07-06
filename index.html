@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<!-- 
+		  GIT417/418:
+		  Author: Jose Esquivel
+		  Date: June 25 2021
+		 -->
+
+
+		<title>Web Design | Jose Esquivel</title>
+		<meta charset="utf-8">
+		<meta name="viewport"
+		content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="cafe.css">	
+		<script src="modernizr.custom.05819.js"></script>
+    <script src="highlight.js"></script>
+		<!-- <script src="mars.js"></script> -->
+     <!-- These 2 lines of code get the highlight js code library from a cloud content distribution network (CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/javascript.min.js"></script>
+    <!-- In order to add html code examples this line needs to be in the head tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/languages/xml.min.js"></script>
+    <!-- This line is needed for the default CSS style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.5/styles/default.min.css">
+    <!-- End of hightlight JS code library CDN declarations Everything after this is your design and tutorial-->
+  
+	</head>
+
+<body class="light">
+<div id="wrapper">
+  <header>
+    <h1>Jose Esquivel</h1>
+  </header>
+
+<nav>
+	<ul class="navbar">
+		<li class="navbar"><a href="index.html">Home</a></li>
+		<li class="navbar"><a href="about.html">About</a></li>
+		<li class="navbar"><a href="photography.html">Photography</a></li>
+		<li class="navbar"><a href="contact.html">Contact</a></li>
+	</ul>
+</nav>
+<!-- A message that changes every day of the week.-->
+<div class="hey">
+  <h2>Today's message</h2>
+  <p id="write"></p>
+</div>
+
+
+ <div id="sbuximage"></div>
+<fieldset class="sbux" >
+  <legend class="drink" id="sbuxlegend"> What is your favorite Starbucks drink?</legend>
+<form id="a">
+ <label for="">Name</label>
+ <input type="text" id="orderName">
+  
+ <label for="">Drink</label>
+ <input type="text" id="orderDrink">
+ 
+ <label for="">Size</label>
+ <input type="text" id="orderSize">
+ 
+ <button type="button" class="button" id="sbuxButton">Create Order</button>
+ <!-- <input type="button" value="preview" class="button" id="sbuxButton"> -->
+
+</form>
+</fieldset>
+
+
+<div id="test"></div>
+
+
+<div id="tutorial">
+  <h1>Javascript Tutorial</h1>
+  <h2>Displaying user input</h2>
+  <!-- In this example, the browser will render a user input with a message -->
+  <p>In this example we will use <strong>document.getElementById(id);</strong> and your input to display a message on the page. Give it a try below.</p>
+
+  <label>Please enter your name</label>
+  <input type="text" name="userInput" id="userInput"> 
+  <button type="button" class="button" id="tryme">Try me</button>
+
+  <h3 id="userMessage">hello</h3>
+  
+
+
+
+  <p>We use <strong>document.getElementById("tryme")</strong> to get the element from the HTML with the id of "tryme".</p>
+  <p><strong>addEventListeners("click,getname,false")</strong>adds the behaivor to the button "tryme". It gives it instructions to run the getname function when clicked.</p>
+<pre>
+    <code class="javascript">
+    document.getElementById("tryme").addEventListener("click",getname, false)
+  </code>
+</pre>
+
+<pre>
+    <code class="html">
+      &lt;input type=&quot;text&quot; name=&quot;userInput&quot; id=&quot;userInput&quot;&gt; 
+      &lt;button type=&quot;button&quot; class=&quot;button&quot; id=&quot;tryme&quot;&gt;Try me&lt;/button&gt;
+    </code>
+</pre>
+
+
+<p>This <strong>getname()</strong> function is telling the document to get the element named "usesrMessage" and write html by using <strong>innerHTML</strong>.</p>
+
+<p>We make the <strong>innerHTML</strong> = to our desired message. We want to get the name from the userInput box and have it display its value.</p>
+
+  <pre>
+  <code class="javascript">
+   function getname() {
+     document.getElementById("userMessage").innerHTML = userInput.value + ", Lets learn how to code";
+   }
+  </code>
+</pre>
+  
+  <p>To get the value the user writes in the box we have to instruct javascript to get the value inside. To do so we create a variable using <strong>var</strong> and have it = to the HTML input id.</p>
+  <p>To display the message I created a <strong>div</strong> element with the id of <strong>userMessage</strong> and followed the same technique to get it from our html.</p>
+
+ <pre>
+  <code class="javascript">
+  var userMessage = document.getElementById("userMessage");
+  var userInput = document.getElementById("userInput");
+  </code>
+</pre>
+  
+<p>Finally, we put the pieces together. We reference <strong>userInput</strong> and add <strong>.value</strong> after it. This will get the value inside the userInput element, which in this scenario is a name. We then add <strong>+</strong> and a custom message between quotations <strong>""</strong> followed by a semicolon <strong>;</strong> to complete it. </p> 
+<pre>
+
+  <code class="javascript">
+   function getname() {
+     document.getElementById("userMessage").innerHTML = userInput.value + ", Lets learn how to code";
+   }
+  </code>
+</pre>
+  <pre>
+    <code class="html">
+    &lt;h3 id=&quot;userMessage&quot;&gt;hello&lt;/h3&gt;
+    </code>
+  </pre>
+
+</div>
+
+
+   
+
+<main id = "main">
+  <h2 class="homeabout">BRAND STRATEGY ● WEBSITE DESIGN ● DIGITAL MARKETING</h2>
+
+<div class="selfie">
+ <img src="mac.png" id="s" alt="computer image">
+  </div>
+
+<article id="service" class="sbux">	
+	<div id="serviceheading">
+	  <h2>Contact us about a service.</h2>
+	  <p>We would love to work with you! Please fill out the form below and we will reach out to you shortly. Thank you!</p>
+    </div>
+  <form id="serviceform">
+  	   <!-- error message -->
+  	   <div id="errormessage">
+  	     <h2 id="messageHead"></h2>
+         <p id="message"></p>
+       </div> 
+    <fieldset id="nameandemail">
+    	<legend>Name</legend>
+    	
+    	<label for="firstname">First name</label>
+    	<input type="text" name="nameInput" id="nameInput" value="">
+    	</fieldset>
+    	<fieldset>
+    	<legend>Email</legend>
+    	<label for="email">Email</label>
+    	<input type="text" name="email" id="emailInput">
+    	</fieldset>
+    <fieldset>
+      <legend>Service of Interest</legend>
+      
+      <input type="radio" name="service" id="webDesign"
+      value="webDesign">
+      <label for="webDesign">Web Design</label>
+      <br>
+       <input type="radio" name="service" id="eventDesign"
+      value="eventDesign">
+      <label for="eventDesign"> Event Design</label>
+      <br>
+      <input type="radio" name="service" id="photography"
+      value="photography">
+      <label for="photography">Photography</label>
+    </fieldset>
+    <fieldset>
+      <legend>Privacy Policy</legend>
+      <label for="privacy">I agree to the Privacy Policy</label>
+      <input type="radio" name="privacy" id="privacy">
+    </fieldset>
+    <button type="button" id="send">Send</button>
+  </form>  
+  <h2 id="confirmation"></h2>
+</article>
+
+
+<!-- A converter tells you the weight of an object on mars-->
+<div class="space">
+	    <h2>How Much Would You Or Any Object Weigh On Mars?</h2>
+     
+      <form id="converter">
+
+	      <h2>Calculate your weight on MARS</h2>
+
+	      <div id="error"></div>
+	    <div class="floatp"> 
+          <div class="floatchild">
+	        <br>
+	        <label for ="Wearth">Your Weight on earth (lb):</label>
+		  </div>
+		  <div class="floatchild">
+	        <br>
+	        <input type="number" id="Wearth">
+	      </div>
+	      <button type="button" class="button">calculate</button>
+	    </div>
+
+	      
+	    
+	       <p id="marstext">Your weight on mars: <span id="Wmars"></span></p>
+
+    </form>
+ </div>
+<!-- Grader: You accidentally removed this script block. This is so the highligter library will actually work -->
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="mars.js"></script>
+
+</main>
+</div>
+</body>
+</html>
